@@ -97,13 +97,13 @@ python -m venv env
 source env/bin/activate  # Windows: env\Scripts\activate
 pip install -r requirements.txt
 ```
-###🧱 Apply Migrations & Run Server
+🧱 Apply Migrations & Run Server
 ```bash
 python manage.py migrate
 python manage.py createsuperuser  # Create admin account
 python manage.py runserver
 ```
-###👥 Roles & Permissions
+👥 Roles & Permissions
 
 | **Role**   | **Permissions**                                                             |
 |------------|------------------------------------------------------------------------------|
