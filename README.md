@@ -60,4 +60,67 @@ QuickDesk delivers a centralized platform for:
 ---
 
 ## 🏗️ System Architecture
+Frontend (Bootstrap + HTML Templates)
+↓
+Django Views (Business Logic & Routing)
+↓
+Models (User, Ticket, Comment)
+↓
+SQLite (default) / PostgreSQL (for production)
+
+---
+
+## 📁 Project Structure
+
+quickdesk/
+├── helpdesk/ # Core app: models, views, URLs for ticketing
+├── users/ # Custom user model & roles
+├── templates/ # HTML templates for UI
+├── static/ # CSS/JS/assets
+├── media/ # Uploaded files
+├── manage.py
+└── db.sqlite3
+
+---
+
+## 🛠️ Setup & Installation
+
+### 🔁 Clone Repository
+
+```bash
+git clone https://github.com/your-username/quickdesk.git
+cd quickdesk
+```
+### ⚙️ Create Virtual Environment & Install Dependencies
+```bash
+python -m venv env
+source env/bin/activate  # Windows: env\Scripts\activate
+pip install -r requirements.txt
+```
+###🧱 Apply Migrations & Run Server
+```bash
+python manage.py migrate
+python manage.py createsuperuser  # Create admin account
+python manage.py runserver
+```
+###👥 Roles & Permissions
+
+| **Role**   | **Permissions**                                                             |
+|------------|------------------------------------------------------------------------------|
+| **User**   | - Create tickets<br>- View own tickets<br>- Add comments                    |
+| **Agent**  | - View all tickets<br>- Comment on any<br>- Assist with resolution          |
+| **Admin**  | - Full access<br>- View/manage all tickets<br>- Assign agents<br>- Manage users |
+
+### 🔮Roadmap/Future Enhancements
+| Feature                              | Description                                                                                           |
+| ------------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| ✅ **AI-based Ticket Prioritization** | Leverage machine learning to auto-assign priority levels based on ticket content and urgency.         |
+| 📈 **Admin Analytics Dashboard**     | Visual dashboards with heatmaps, SLA tracking, ticket trends, and performance metrics.                |
+| 🔔 **Email/SMS Notifications**       | Real-time notifications to users and agents on ticket creation, assignment, and updates.              |
+| 🌍 **Multilingual & Accessible UI**  | Support for multiple languages and WCAG-compliant accessible design.                                  |
+| 📲 **Mobile App / PWA**              | Build a Progressive Web App or dedicated mobile app for seamless ticket handling on the go.           |
+| 🤝 **Odoo Module Integration**       | Integrate with Odoo ERP to enable real-time synchronization of support tickets, users, and workflows. |
+
+
+
 
