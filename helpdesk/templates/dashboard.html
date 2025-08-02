@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Helpdesk Dashboard</h2>
+<div style="display:flex; justify-content:center; flex-wrap:wrap; gap:32px; margin-top:32px;">
+    <div style="background:#f1f5f9; border-radius:12px; box-shadow:0 2px 12px #e0e7ef; padding:28px 36px; min-width:260px; text-align:center;">
+        <div style="font-size:2.2rem; margin-bottom:10px;">📝</div>
+        <div style="font-weight:600; color:#2563eb; margin-bottom:6px;">Create Ticket</div>
+        <div style="color:#64748b; font-size:1rem;">Submit a new support request for quick assistance.</div>
+        <a href="{% url 'create_ticket' %}" style="display:inline-block; margin-top:16px; background:#2563eb; color:#fff; padding:8px 22px; border-radius:6px; text-decoration:none; font-weight:600; font-size:1rem;">Create</a>
+    </div>
+    <div style="background:#f1f5f9; border-radius:12px; box-shadow:0 2px 12px #e0e7ef; padding:28px 36px; min-width:260px; text-align:center;">
+        <div style="font-size:2.2rem; margin-bottom:10px;">🔍</div>
+        <div style="font-weight:600; color:#2563eb; margin-bottom:6px;">View Tickets</div>
+        <div style="color:#64748b; font-size:1rem;">Browse, filter, and track your submitted tickets.</div>
+        <a href="{% url 'ticket_list' %}" style="display:inline-block; margin-top:16px; background:#2563eb; color:#fff; padding:8px 22px; border-radius:6px; text-decoration:none; font-weight:600; font-size:1rem;">View</a>
+    </div>
+    <div style="background:#f1f5f9; border-radius:12px; box-shadow:0 2px 12px #e0e7ef; padding:28px 36px; min-width:260px; text-align:center;">
+        <div style="font-size:2.2rem; margin-bottom:10px;">💬</div>
+        <div style="font-weight:600; color:#2563eb; margin-bottom:6px;">Ticket Status</div>
+        <div style="color:#64748b; font-size:1rem;">Check updates and comments on your tickets.</div>
+        <a href="{% url 'ticket_list' %}" style="display:inline-block; margin-top:16px; background:#2563eb; color:#fff; padding:8px 22px; border-radius:6px; text-decoration:none; font-weight:600; font-size:1rem;">Status</a>
+    </div>
+    <div style="background:#f1f5f9; border-radius:12px; box-shadow:0 2px 12px #e0e7ef; padding:28px 36px; min-width:260px; text-align:center;">
+        <div style="font-size:2.2rem; margin-bottom:10px;">📂</div>
+        <div style="font-weight:600; color:#2563eb; margin-bottom:6px;">Manage Categories</div>
+        <div style="color:#64748b; font-size:1rem;">(Admin only) Organize ticket categories.</div>
+        <a href="#" style="display:inline-block; margin-top:16px; background:#2563eb; color:#fff; padding:8px 22px; border-radius:6px; text-decoration:none; font-weight:600; font-size:1rem;">Manage</a>
+    </div>
+</div>
+{% endblock %}

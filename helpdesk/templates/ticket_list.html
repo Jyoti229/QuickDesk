@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Ticket #{{ ticket.id }} - {{ ticket.subject }}</h2>
+<p><strong>Status:</strong> {{ ticket.status }}</p>
+<p><strong>Description:</strong> {{ ticket.description }}</p>
+<p><strong>Category:</strong> {{ ticket.category }}</p>
+<p><strong>Last Updated:</strong> {{ ticket.updated_at }}</p>
+<hr>
+<h3>Comments</h3>
+<ul>
+    {% for comment in ticket.comments.all %}
+        <li><strong>{{ comment.author }}:</strong> {{ comment.text }} <em>({{ comment.created_at }})</em></li>
+    {% empty %}
+        <li>No comments yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

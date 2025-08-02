@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="text-align:center;">
+    <img src="https://img.freepik.com/free-vector/technology-isometric-flowchart_1284-17094.jpg" alt="Tech Banner" style="max-width: 370px; width: 100%; border-radius: 16px; box-shadow: 0 2px 16px #cbd5e1; margin-bottom: 32px;">
+    <h1 style="font-size:2.5rem; color:#2563eb; margin-bottom: 12px; letter-spacing:1px;">Welcome to QuickDesk</h1>
+    <p style="font-size:1.18rem; color:#334155; margin-bottom: 28px;">
+        Your modern, powerful help desk solution.<br>
+        Raise tickets, get support, and manage everything with ease.
+    </p>
+    <div style="display:flex; justify-content:center; gap:18px; flex-wrap:wrap;">
+        <a href="{% url 'register' %}" style="background:#2563eb; color:#fff; padding:12px 32px; border-radius:8px; text-decoration:none; font-weight:600; font-size:1.08rem; box-shadow:0 2px 8px #dbeafe; transition:background 0.2s; display:flex; align-items:center; gap:8px;">
+            <span style="font-size:1.3rem;">🚀</span> Get Started
+        </a>
+        <a href="{% url 'about' %}" style="background:#fff; color:#2563eb; border:2px solid #2563eb; padding:12px 32px; border-radius:8px; text-decoration:none; font-weight:600; font-size:1.08rem; box-shadow:0 2px 8px #dbeafe; transition:background 0.2s;">Learn More</a>
+    </div>
+    <div style="margin-top:18px; color:#64748b; font-size:1.05rem;">
+        <span style="font-size:1.2rem;">✨</span>
+        <em>Start your support journey in just a few clicks!</em>
+    </div>
+</div>
+{% endblock %}
